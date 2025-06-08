@@ -1,0 +1,52 @@
+# Node modules
+/node_modules
+
+node_modules/
+
+
+# Build output
+/dist
+/build
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor folders/files
+.vscode/
+.idea/
+
+# React specific
+/.pnp
+.pnp.js
+
+# Miscellaneous
+*.cache
+*.bak
+
+# For TypeScript
+*.tsbuildinfo
+
+# Coverage directory used by testing tools
+/coverage
+
+# Local npm cache
+.npm
+
+# Lock files (you can choose to keep or ignore these)
+/package-lock.json
+/yarn.lock

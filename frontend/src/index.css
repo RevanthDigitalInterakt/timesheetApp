@@ -1,0 +1,133 @@
+/* index.css */
+
+body {
+    margin: 0;
+    font-family: 'Inter', 'Poppins', sans-serif; /* Ensure you have these fonts imported or use a suitable fallback */
+    background-color: #a6a9ac; /* Set the main body background to light gray */
+    overflow: hidden; /* Prevent scrollbars if content slightly exceeds viewport */
+}
+
+.login-page-container {
+    display: flex;
+    min-height: 100vh; /* Full viewport height */
+    background-color: #F4F7FA; /* This ensures the entire split-screen area has the light gray background */
+}
+
+.login-illustration-section {
+    flex: 1; /* Takes up half the space */
+    background-color: #F4F7FA; /* This section should also be the same light gray as the overall background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* The image itself will be the background or content of this section */
+    /* If LoginIllustration is a full background, you can use: */
+    background-image: url('../src/assets/loginbg.jpg'); /* Use your background image directly here */
+    background-size: contain; /* Or 'cover' depending on how you want the image to behave */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.login-illustration-section img {
+    /* Hide the img tag if you're using the image as a background-image in CSS */
+    display: none;
+    /* If your loginbg.jpg is already the full-size illustration with the background,
+       you might not need this img tag in your JSX, or you'd style it differently.
+       If it's just the illustration on a transparent background, keep the img tag
+       and let background-color handle the grey. */
+}
+
+
+.login-form-section {
+    flex: 1; /* Takes up the other half */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d7d4d4; /* Make the form section background match the overall grey */
+    padding: 20px; /* Add some padding */
+}
+
+.login-form-card {
+    background-color: #FFFFFF; /* The form card itself remains white to stand out */
+    padding: 40px;
+    border-radius: 10px; /* Rounded corners for the form card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%;
+    max-width: 450px; /* Max width for the form itself */
+}
+
+.login-logo {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.login-logo img {
+    max-width: 150px; /* Adjust as needed for your logo */
+}
+
+.login-heading {
+    color: #333333; /* Dark gray for readability */
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-control {
+    border-radius: 8px; /* Rounded corners for input fields */
+    padding: 12px 15px;
+    border: 1px solid #E0E0E0;
+}
+
+.btn-primary {
+    background-color: #4A90E2; /* Primary blue */
+    border-color: #4A90E2;
+    padding: 12px 0;
+    border-radius: 8px; /* Rounded corners for buttons */
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #357ABD; /* Darker blue on hover */
+    border-color: #357ABD;
+}
+
+.forgot-password-link, .contact-admin-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #4A90E2; /* Primary blue for links */
+    text-decoration: none;
+    font-size: 0.95em;
+}
+
+.forgot-password-link:hover, .contact-admin-link:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .login-page-container {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+    }
+
+    .login-illustration-section {
+        display: none; /* Hide illustration on small screens to save space */
+    }
+
+    .login-form-section {
+        flex: none; /* Reset flex */
+        width: 100%;
+        padding: 20px;
+    }
+
+    .login-form-card {
+        padding: 30px 20px;
+        box-shadow: none; /* No shadow on small screens */
+    }
+}
